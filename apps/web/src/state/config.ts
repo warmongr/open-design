@@ -227,6 +227,23 @@ export const KNOWN_PROVIDERS: KnownProvider[] = [
     ],
   },
   {
+    label: 'Command Code',
+    protocol: 'openai',
+    baseUrl: 'https://api.commandcode.ai/provider/v1',
+    // Only models whose catalog entry lists `/chat/completions` in
+    // `supported_endpoints` (Claude models on this gateway are
+    // `/messages`-only and belong on the anthropic protocol).
+    preferredModels: [
+      'deepseek/deepseek-v4.1-flash',
+      'deepseek/deepseek-v4-flash',
+      'deepseek/deepseek-v4-pro',
+      'moonshotai/Kimi-K3',
+      'z-ai/glm-5.3-flash',
+      'Qwen/Qwen3.8-Flash',
+      'gpt-5.6-terra',
+    ],
+  },
+  {
     label: 'Azure OpenAI',
     protocol: 'azure',
     baseUrl: '',
